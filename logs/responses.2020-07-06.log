@@ -1,0 +1,186 @@
+[2020-07-06T10:14:15.428] [INFO] response - { method: 'GET',
+  url: '/api/users/userinfo',
+  body: {},
+  costTime: 1,
+  response:
+   { status: 401,
+     message: 'Unauthorized',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/plain; charset=utf-8',
+        'content-length': '12' },
+     body: 'Unauthorized' } }
+[2020-07-06T10:14:20.462] [INFO] response - { method: 'GET',
+  url: '/favicon.ico',
+  body: {},
+  costTime: 1,
+  response:
+   { status: 404,
+     message: 'Not Found',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '473' },
+     body:
+      '\n<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <meta http-equiv="X-UA-Compatible" content="ie=edge">\n    <link rel="stylesheet" href="/stylesheets/error.css">\n    <title>错误信息</title>\n</head>\n<body>\n    <div class="content">\n            <h1>抱歉，找不到你的诗和远方了！</h1>\n            \n            <h2>404</h2>\n            \n    </div>\n</body>\n</html>' } }
+[2020-07-06T10:14:24.153] [INFO] response - { method: 'GET',
+  url: '/',
+  body: {},
+  costTime: 70,
+  response:
+   { status: 200,
+     message: 'OK',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '1252' },
+     body:
+      '<!DOCTYPE html>\n<head>\n\t<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n\t<title>登录</title>\n\t<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />\n\t<link rel="stylesheet" type="text/css" href="/stylesheets/body.css"/> \n</head>\n<body>\n\t<div class="container">\n\t\t<section id="content">\n\t\t\t<form action="/checkLogin" method="post">\n\t\t\t\t<h1>登录</h1>\n\t\t\t\t<div>\n\t\t\t\t\t<input type="text" placeholder="账号" required="" id="account" name="account"/>\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<input type="password" placeholder="密码" required="" id="password" name="password"/>\n\t\t\t\t</div>\n\n\t\t\t\t<div> <input placeholder="验证码" id="verify" type="text" name="code">\n\t\t\t\t\t<img id="verify_img" src="/verify" title="看不清？点击刷新"  style="position: relative;top: 15px;"\n\t\t\t\t\t\tonclick="javascript:this.src=\'/verify?mt=\'+Math.random()">\n\t\t\t\t</div>\n\n\t\t\t\t<div class="">\n\t\t\t\t\t<span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>\n\t\t\t\t</div>\n\n\t\t\t\t<div>\n\t\t\t\t\t<!-- <input type="submit" value="Log in" /> -->\n\t\t\t\t\t<input type="submit" value="登录" class="btn btn-primary" id="js-btn-login"/>\n\t\t\t\t</div>\n\t\t\t</form><!-- form -->\n\n\t\t</section><!-- content -->\n\t</div>\n\t<!-- container -->\n</body>\n</html>' } }
+[2020-07-06T10:14:24.263] [INFO] response - { method: 'GET',
+  url: '/verify',
+  body: {},
+  costTime: 4,
+  response:
+   { status: 200,
+     message: 'OK',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'image/svg+xml',
+        'content-length': '10031' },
+     body:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0,0,100,40"><rect width="100%" height="100%" fill="#cc9966"/><path d="M17 24 C62 9,62 33,91 30" stroke="#7f60dc" fill="none"/><path fill="#2a3630" d="M16.83 24.28L16.68 24.13L16.82 24.27Q13.04 24.06 12.53 26.78L12.57 26.82L12.51 26.76Q12.39 27.77 12.56 28.55L12.61 28.60L12.44 28.43Q12.58 29.24 12.98 30.50L12.86 30.38L12.89 30.40Q13.81 33.19 16.77 33.06L16.88 33.17L16.93 33.22Q18.58 33.13 19.77 31.74L19.81 31.78L19.78 31.75Q20.97 30.53 20.97 28.70L20.98 28.70L20.84 28.57Q21.17 28.25 21.03 27.30L21.02 27.29L20.84 27.11Q20.83 26.35 20.46 25.74L20.59 25.87L20.51 25.78Q19.16 24.40 16.84 24.30ZM21.15 40.77L21.05 40.67L21.06 40.69Q19.38 41.14 12.17 41.48L12.25 41.56L12.24 41.55Q10.68 41.55 9.22 40.81L9.37 40.96L9.28 40.87Q9.94 39.93 11.57 38.33L11.72 38.48L11.65 38.41Q13.76 39.29 15.63 39.12L15.70 39.19L15.68 39.18Q18.22 38.90 18.97 38.66L19.10 38.79L19.10 38.79Q20.97 38.04 20.97 36.45L20.91 36.39L21.00 36.47Q20.94 36.21 20.87 36.01L20.94 36.08L20.85 34.66L20.91 34.72Q20.80 33.93 20.80 33.21L20.83 33.25L20.83 33.25Q19.60 35.25 16.58 35.25L16.63 35.30L16.68 35.35Q13.17 35.31 11.71 33.33L11.57 33.20L11.59 33.22Q10.77 32.02 10.05 28.08L9.93 27.95L9.90 27.93Q9.61 26.55 9.61 25.29L9.72 25.39L9.76 25.44Q9.67 23.75 10.48 22.86L10.51 22.89L10.43 22.81Q12.09 21.72 16.24 21.72L16.09 21.57L17.80 21.89L17.76 21.85Q20.63 22.17 21.82 23.90L21.77 23.85L21.79 23.87Q21.87 23.03 22.24 21.57L22.36 21.69L22.32 21.65Q23.88 21.24 25.44 20.59L25.50 20.64L25.56 20.70Q23.04 26.01 23.04 32.46L23.18 32.60L23.18 32.60Q23.18 34.98 23.52 37.33L23.43 37.24L23.38 37.19Q23.53 37.79 23.47 38.40L23.57 38.50L23.53 38.46Q23.43 39.76 22.34 40.44L22.33 40.42L22.26 40.35Q21.95 40.72 21.20 40.82ZM23.72 43.31L23.78 43.37L23.86 43.45Q25.03 43.36 25.71 42.51L25.67 42.47L25.69 42.49Q26.02 41.67 25.92 41.02L25.92 41.02L25.92 41.02Q25.90 40.52 25.73 39.84L25.67 39.79L25.65 39.76Q24.66 35.21 24.97 30.52L24.86 30.41L24.89 30.44Q25.26 25.64 27.16 21.32L27.20 21.36L25.28 22.16L25.28 22.16Q25.50 21.63 25.70 21.12L25.60 21.02L26.06 20.02L26.07 20.03Q24.03 20.94 22.06 21.32L22.05 21.32L21.97 21.23Q21.78 22.09 21.64 23.01L21.59 22.96L21.54 22.91Q19.82 21.36 16.21 21.36L16.20 21.34L14.52 21.23L14.56 21.27Q11.60 21.20 10.11 22.45L10.22 22.57L10.10 22.45Q9.34 23.39 9.37 25.08L9.46 25.17L9.39 25.11Q9.39 27.28 10.31 31.09L10.42 31.19L10.34 31.11Q10.80 32.87 11.89 34.13L11.84 34.07L12.15 34.39L12.09 34.33L12.23 34.47Q13.25 36.54 15.56 37.02L15.59 37.04L15.48 36.93Q16.77 37.24 18.06 37.27L17.97 37.18L18.09 37.30Q19.71 37.40 20.66 37.06L20.54 36.93L20.52 36.91Q20.06 38.39 17.68 38.70L17.60 38.61L17.74 38.76Q16.74 38.84 16.13 38.84L16.01 38.72L15.81 38.87L15.70 38.75Q13.30 38.87 11.81 38.02L11.73 37.95L10.29 39.56L10.28 39.56Q9.43 40.20 8.68 41.05L8.62 40.99L8.67 41.03Q9.63 41.59 10.52 41.76L10.55 41.80L9.66 42.47L9.60 42.41Q12.20 43.55 17.23 43.55L17.19 43.51L17.35 43.46L17.42 43.53Q20.48 43.37 23.68 43.27ZM18.52 26.35L18.39 26.22L18.45 26.28Q19.69 26.29 20.50 26.66L20.35 26.51L20.50 26.67Q20.68 27.12 20.75 27.73L20.64 27.61L20.61 27.59Q20.68 27.90 20.65 28.71L20.72 28.79L20.60 28.66Q20.57 30.41 19.59 31.56L19.64 31.61L19.69 31.67Q18.47 32.76 16.77 32.72L16.86 32.81L16.83 32.78Q15.66 32.84 14.92 32.46L14.73 32.28L14.91 32.46Q14.58 31.45 14.54 30.53L14.39 30.37L14.55 30.53Q14.35 26.56 18.47 26.29Z"/><path fill="#3b3a40" d="M62.17 23.36L62.06 23.24L56.76 23.28L56.76 23.28Q54.33 23.50 51.71 23.43L51.65 23.37L51.57 23.29Q51.71 29.31 49.87 34.24L49.93 34.30L49.93 34.29Q48.29 34.73 46.73 35.34L46.66 35.28L46.63 35.24Q49.08 30.11 49.08 24.16L49.24 24.33L49.11 24.20Q49.19 16.70 45.52 10.41L45.42 10.31L45.40 10.29Q46.76 11.00 48.97 11.71L49.09 11.83L49.06 11.80Q50.95 16.31 51.42 20.66L51.44 20.68L51.44 20.68Q54.29 21.04 56.84 21.01L56.76 20.93L56.76 20.94Q59.24 21.04 62.20 20.80L62.27 20.87L62.28 20.88Q62.61 16.85 64.17 12.30L64.24 12.37L64.16 12.29Q65.85 11.87 67.86 11.13L67.94 11.21L67.84 11.11Q64.69 17.21 64.69 24.31L64.76 24.38L64.68 24.30Q64.72 29.88 66.83 34.64L66.75 34.56L66.79 34.60Q65.42 34.11 63.58 33.84L63.57 33.83L63.48 33.74Q62.06 29.32 62.16 23.34ZM63.22 34.02L63.21 34.02L63.23 34.04Q64.09 34.11 65.08 34.35L65.20 34.47L65.10 34.37Q65.40 35.01 65.98 36.34L66.15 36.52L65.98 36.34Q69.12 37.34 70.72 38.16L70.60 38.04L70.72 38.16Q66.68 32.59 66.41 25.21L66.31 25.11L66.42 25.22Q66.18 18.08 69.44 12.00L69.48 12.04L68.41 12.33L68.43 12.35Q67.96 12.52 67.41 12.65L67.47 12.71L67.38 12.62Q67.81 11.96 68.56 10.57L68.52 10.53L68.64 10.65Q66.12 11.43 63.78 11.87L63.81 11.91L63.90 12.00Q62.29 16.20 61.88 20.38L62.04 20.54L61.99 20.49Q59.71 20.62 57.54 20.62L57.62 20.71L57.60 20.68Q55.34 20.56 53.09 20.43L53.09 20.43L53.24 20.58Q52.95 17.57 51.96 13.93L52.07 14.03L51.95 13.91Q51.39 13.87 50.10 13.53L50.12 13.54L50.12 13.54Q49.66 12.33 49.25 11.42L49.24 11.41L49.33 11.49Q46.94 10.87 44.90 9.75L44.75 9.61L44.78 9.64Q48.94 16.35 48.94 24.20L48.84 24.10L48.84 24.09Q48.93 30.40 46.14 35.87L46.16 35.90L46.10 35.83Q46.79 35.64 47.98 35.13L47.92 35.07L48.00 35.15Q47.65 35.86 46.94 37.22L46.95 37.23L46.89 37.17Q49.46 36.34 51.47 35.97L51.39 35.89L51.56 36.06Q53.08 30.95 53.25 25.44L53.23 25.43L53.37 25.57Q54.66 25.36 57.51 25.32L57.62 25.43L57.53 25.34Q60.20 25.43 61.90 25.49L61.84 25.43L61.86 25.46Q62.02 30.51 63.21 34.01Z"/><path fill="#242a22" d="M77.60 24.44L77.57 24.41L77.63 24.46Q75.19 24.17 74.00 25.26L74.15 25.41L73.99 25.24Q72.86 26.39 73.13 28.63L73.13 28.63L73.21 28.71Q73.48 30.95 74.57 32.07L74.45 31.96L74.54 32.05Q75.45 33.19 77.35 33.13L77.48 33.26L77.46 33.23Q77.80 33.06 77.97 33.06L78.01 33.10L78.04 33.13Q81.28 32.67 81.39 28.56L81.40 28.57L81.23 28.41Q81.41 26.41 80.80 25.69L80.79 25.68L80.75 25.64Q79.73 24.43 77.45 24.29ZM80.55 34.90L80.51 34.85L80.46 34.81Q79.25 35.30 77.86 35.23L77.96 35.33L78.01 35.38Q74.47 35.45 73.32 33.14L73.40 33.22L73.33 33.15Q73.23 37.98 72.04 41.79L72.05 41.79L72.01 41.75Q70.35 42.13 68.89 42.78L68.99 42.88L68.87 42.76Q71.14 37.41 70.90 31.19L71.04 31.34L71.05 31.35Q70.81 25.22 68.22 19.82L68.16 19.76L68.24 19.84Q69.92 20.83 71.45 21.24L71.55 21.34L71.93 22.57L71.99 22.63Q72.05 22.90 72.29 23.88L72.30 23.90L72.34 23.93Q73.21 22.05 76.40 21.88L76.45 21.92L76.46 21.93Q77.21 21.87 77.99 21.87L77.87 21.75L78.30 21.74L78.29 21.72Q78.51 21.84 78.68 21.88L78.66 21.85L78.95 21.87L78.87 21.79Q80.86 22.19 81.51 22.39L81.42 22.31L81.50 22.38Q82.70 22.67 83.48 23.52L83.63 23.66L83.56 23.59Q84.24 24.58 84.20 25.84L84.32 25.95L84.17 25.81Q84.33 28.51 83.62 30.89L83.46 30.73L83.46 30.74Q82.58 33.90 80.47 34.82ZM84.29 35.38L84.32 35.37L84.31 35.36Q85.35 33.65 85.62 29.98L85.61 29.97L85.51 29.86Q85.61 28.27 85.61 27.14L85.61 27.15L85.65 27.19Q85.70 25.87 85.02 24.61L85.00 24.60L84.98 24.58Q84.75 24.31 84.31 23.97L84.18 23.84L84.09 23.65L83.81 23.27L83.87 23.22L83.93 23.28Q82.37 21.46 78.50 21.46L78.41 21.37L77.94 21.44L77.93 21.44Q73.85 21.50 72.39 22.93L72.27 22.81L72.32 22.86Q72.11 22.34 71.98 21.90L72.01 21.94L71.76 20.97L71.87 21.08Q69.60 20.48 67.63 19.15L67.69 19.21L67.55 19.07Q70.46 24.70 70.73 31.16L70.84 31.27L70.84 31.27Q70.95 37.60 68.40 43.38L68.35 43.33L70.32 42.74L70.17 42.60Q70.10 43.41 69.49 44.81L69.38 44.70L69.39 44.71Q71.90 43.86 73.98 43.55L73.94 43.52L73.94 43.52Q74.80 39.07 74.94 35.74L74.92 35.72L74.98 35.79Q76.28 37.15 79.51 37.35L79.55 37.40L79.47 37.31Q83.03 37.58 84.32 35.41L84.37 35.45ZM79.28 26.42L79.28 26.42L79.33 26.47Q79.79 26.29 80.78 26.60L80.81 26.63L80.79 26.60Q81.04 27.50 81.00 28.55L81.01 28.56L81.09 28.64Q80.93 29.29 80.76 29.87L80.92 30.03L80.84 29.95Q80.23 32.57 77.99 32.84L78.04 32.90L78.14 32.90L77.98 32.74Q77.92 32.74 77.82 32.78L77.96 32.92L77.42 32.86L77.49 32.92Q76.30 32.79 75.41 32.34L75.52 32.45L75.04 30.44L75.18 30.58Q74.95 28.42 76.11 27.50L76.23 27.62L76.26 27.65Q77.06 26.58 79.20 26.34Z"/><path fill="#44423f" d="M40.42 25.33L40.33 25.24L40.36 25.27Q40.30 24.23 38.56 23.58L38.47 23.49L38.61 23.62Q38.14 23.43 37.67 23.43L37.56 23.32L37.69 23.45Q36.37 23.36 35.42 23.87L35.34 23.79L35.50 23.94Q34.23 24.55 34.33 25.63L34.21 25.51L34.38 25.68Q34.66 28.17 34.52 30.18L34.56 30.22L34.55 30.21Q34.25 32.22 33.61 34.46L33.71 34.56L33.72 34.57Q31.71 34.91 30.66 35.28L30.70 35.33L30.76 35.38Q32.22 32.19 32.22 28.62L32.10 28.50L32.11 28.51Q32.10 23.65 29.79 19.67L29.89 19.77L29.80 19.68Q30.90 20.13 33.04 20.78L33.07 20.80L33.14 20.87Q33.30 21.41 33.64 22.77L33.68 22.81L33.76 22.88Q34.96 21.02 38.42 21.09L38.40 21.07L38.39 21.06Q39.65 21.03 40.36 21.13L40.46 21.22L40.35 21.12Q42.95 21.40 43.01 23.20L43.16 23.35L43.06 23.25Q43.06 24.03 42.89 24.94L43.04 25.10L43.06 25.12Q42.59 27.30 42.76 29.98L42.80 30.03L42.65 29.88Q42.95 32.59 43.83 34.87L43.81 34.84L43.78 34.81Q42.27 34.46 40.74 34.32L40.75 34.33L40.76 34.34Q40.28 32.16 40.21 29.78L40.20 29.77L40.13 29.70Q40.17 27.36 40.38 25.29ZM40.37 34.59L40.28 34.51L40.43 34.66Q41.14 34.65 42.29 34.86L42.27 34.83L42.62 35.79L42.65 35.82Q42.82 36.26 43.02 36.74L42.95 36.67L42.86 36.58Q45.06 37.11 47.48 38.17L47.36 38.05L47.41 38.10Q45.25 35.26 44.63 31.86L44.62 31.85L44.64 31.86Q44.29 29.91 44.39 26.62L44.43 26.65L44.38 26.61Q44.38 26.34 44.42 25.62L44.40 25.61L44.55 25.75Q44.63 25.23 44.56 24.79L44.49 24.71L44.44 24.67Q44.31 23.14 43.33 22.70L43.51 22.88L43.41 22.78Q43.32 22.08 42.64 21.53L42.51 21.40L42.61 21.51Q41.13 20.64 38.42 20.71L38.41 20.71L38.33 20.63Q36.65 20.64 35.90 20.81L36.03 20.95L35.96 20.87Q34.71 21.22 33.86 22.03L33.71 21.88L33.79 21.97Q33.68 21.48 33.34 20.56L33.38 20.60L33.43 20.66Q30.74 19.87 29.11 18.99L29.23 19.11L29.20 19.07Q31.86 23.37 31.86 28.50L31.94 28.58L32.02 28.66Q31.86 32.41 30.17 35.85L30.32 36.00L30.18 35.87Q30.87 35.67 32.03 35.33L31.98 35.29L32.04 35.34Q31.63 36.50 31.16 37.38L31.03 37.25L31.03 37.25Q32.28 36.84 35.44 36.33L35.51 36.40L35.49 36.38Q36.33 31.74 36.22 27.42L36.35 27.55L36.33 27.53Q36.15 26.64 37.20 25.99L37.23 26.02L37.33 26.12Q38.27 25.56 39.25 25.46L39.14 25.35L39.30 25.50Q39.64 25.41 40.02 25.58L39.99 25.55L39.98 25.54Q39.77 27.74 39.81 30.02L39.90 30.12L39.93 30.15Q39.94 32.36 40.38 34.60Z"/></svg>' } }
+[2020-07-06T10:14:24.308] [INFO] response - { method: 'GET',
+  url: '/favicon.ico',
+  body: {},
+  costTime: 3,
+  response:
+   { status: 404,
+     message: 'Not Found',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '473' },
+     body:
+      '\n<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <meta http-equiv="X-UA-Compatible" content="ie=edge">\n    <link rel="stylesheet" href="/stylesheets/error.css">\n    <title>错误信息</title>\n</head>\n<body>\n    <div class="content">\n            <h1>抱歉，找不到你的诗和远方了！</h1>\n            \n            <h2>404</h2>\n            \n    </div>\n</body>\n</html>' } }
+[2020-07-06T10:14:31.882] [INFO] response - { method: 'GET',
+  url: '/',
+  body: {},
+  costTime: 2,
+  response:
+   { status: 200,
+     message: 'OK',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '1252' },
+     body:
+      '<!DOCTYPE html>\n<head>\n\t<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n\t<title>登录</title>\n\t<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />\n\t<link rel="stylesheet" type="text/css" href="/stylesheets/body.css"/> \n</head>\n<body>\n\t<div class="container">\n\t\t<section id="content">\n\t\t\t<form action="/checkLogin" method="post">\n\t\t\t\t<h1>登录</h1>\n\t\t\t\t<div>\n\t\t\t\t\t<input type="text" placeholder="账号" required="" id="account" name="account"/>\n\t\t\t\t</div>\n\t\t\t\t<div>\n\t\t\t\t\t<input type="password" placeholder="密码" required="" id="password" name="password"/>\n\t\t\t\t</div>\n\n\t\t\t\t<div> <input placeholder="验证码" id="verify" type="text" name="code">\n\t\t\t\t\t<img id="verify_img" src="/verify" title="看不清？点击刷新"  style="position: relative;top: 15px;"\n\t\t\t\t\t\tonclick="javascript:this.src=\'/verify?mt=\'+Math.random()">\n\t\t\t\t</div>\n\n\t\t\t\t<div class="">\n\t\t\t\t\t<span class="help-block u-errormessage" id="js-server-helpinfo">&nbsp;</span>\n\t\t\t\t</div>\n\n\t\t\t\t<div>\n\t\t\t\t\t<!-- <input type="submit" value="Log in" /> -->\n\t\t\t\t\t<input type="submit" value="登录" class="btn btn-primary" id="js-btn-login"/>\n\t\t\t\t</div>\n\t\t\t</form><!-- form -->\n\n\t\t</section><!-- content -->\n\t</div>\n\t<!-- container -->\n</body>\n</html>' } }
+[2020-07-06T10:14:31.924] [INFO] response - { method: 'GET',
+  url: '/verify',
+  body: {},
+  costTime: 3,
+  response:
+   { status: 200,
+     message: 'OK',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'image/svg+xml',
+        'content-length': '9022' },
+     body:
+      '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0,0,100,40"><rect width="100%" height="100%" fill="#cc9966"/><path fill="#2f4141" d="M22.23 34.32L22.24 34.33L22.22 34.32Q20.91 32.66 19.75 29.91L19.78 29.93L17.93 25.40L18.02 25.49Q16.59 29.05 16.04 30.21L15.92 30.09L15.96 30.12Q14.60 32.67 13.17 34.37L13.28 34.49L13.20 34.40Q12.81 34.35 12.13 34.45L12.14 34.46L12.16 34.49Q12.27 27.97 7.07 22.66L6.98 22.58L7.00 22.59Q5.50 21.03 3.70 19.70L3.67 19.68L3.60 19.60Q5.27 20.12 6.94 20.39L7.02 20.47L6.90 20.35Q12.45 24.92 13.74 30.49L13.63 30.38L13.77 30.52Q14.41 28.72 15.47 25.86L15.62 26.02L15.60 26.00Q16.71 22.55 17.22 21.39L17.31 21.48L18.47 21.38L18.60 21.52Q19.34 23.00 20.39 25.93L20.42 25.95L20.32 25.85Q21.41 29.01 21.99 30.27L22.01 30.30L22.03 30.32Q23.67 24.71 28.56 20.63L28.71 20.78L28.61 20.68Q29.72 20.64 32.17 20.13L32.06 20.02L32.14 20.10Q24.45 25.49 23.39 34.40L23.36 34.36L22.68 34.16L22.85 34.34Q22.51 34.26 22.20 34.29ZM24.84 36.45L26.62 36.57L26.67 36.62Q26.43 35.30 26.43 33.94L26.28 33.79L26.37 33.88Q26.34 30.95 27.60 28.06L27.68 28.15L27.69 28.15Q29.44 24.10 33.11 21.34L33.13 21.36L33.09 21.33Q31.98 21.54 30.32 21.84L30.35 21.88L30.33 21.86Q32.00 20.30 33.15 19.48L33.30 19.62L30.93 19.91L31.03 20.01Q29.99 20.26 28.80 20.39L28.73 20.32L28.80 20.40Q24.06 24.05 22.32 28.54L22.41 28.62L22.41 28.62Q21.86 26.71 20.64 22.91L20.60 22.87L20.51 22.78Q20.22 22.79 19.98 22.79L20.13 22.94L19.57 22.86L19.49 22.78Q19.50 22.62 18.79 21.06L18.68 20.95L16.90 21.01L16.86 20.97Q15.99 23.46 14.12 28.49L14.10 28.47L14.25 28.62Q13.06 25.32 10.31 22.40L10.23 22.32L10.21 22.30Q9.99 22.32 9.72 22.29L9.68 22.25L9.23 22.21L9.16 22.14Q8.55 21.56 6.95 20.13L6.91 20.09L6.89 20.07Q4.04 19.46 2.54 19.02L2.66 19.13L2.48 18.96Q12.13 25.68 11.79 34.90L11.80 34.91L11.86 34.97Q11.98 34.91 12.30 34.88L12.31 34.89L12.41 34.99Q12.70 34.92 12.87 34.92L12.79 34.84L12.89 34.94Q12.74 34.65 12.91 36.52L12.97 36.58L14.73 36.48L14.76 36.51Q16.94 33.85 18.94 28.72L18.99 28.77L19.09 28.87Q20.29 32.18 21.96 34.56L21.96 34.56L22.09 34.69Q22.19 34.48 22.42 34.50L22.52 34.60L22.48 34.56Q22.68 34.53 22.92 34.53L23.03 34.65L24.76 36.37Z"/><path fill="#302838" d="M37.29 34.56L37.34 34.61L37.28 34.54Q34.67 34.66 33.55 34.18L33.67 34.31L33.73 34.37Q31.99 33.65 32.06 31.44L32.05 31.43L32.01 31.38Q32.07 28.28 32.07 28.79L32.16 28.89L32.19 28.91Q32.08 24.05 29.53 19.73L29.51 19.70L29.48 19.68Q31.25 20.53 33.01 20.87L33.01 20.86L33.06 20.91Q34.66 25.10 34.56 29.11L34.60 29.15L34.52 29.07Q34.43 30.44 35.18 31.53L35.23 31.58L35.10 31.46Q35.93 32.66 37.29 32.49L37.25 32.44L37.65 32.40L37.66 32.42Q38.84 32.34 39.57 31.66L39.54 31.62L39.67 31.75Q40.23 30.90 40.23 30.05L40.24 30.06L40.27 30.09Q40.36 29.98 40.33 29.81L40.34 29.82L40.28 29.76Q40.20 25.06 41.22 21.19L41.32 21.29L41.19 21.16Q42.14 21.12 43.02 20.92L43.03 20.93L44.89 20.54L44.83 20.48Q42.48 24.89 42.75 29.85L42.89 30.00L42.82 29.92Q42.98 32.66 41.45 33.68L41.47 33.71L41.52 33.76Q40.28 34.46 37.33 34.60ZM39.46 36.80L39.36 36.69L39.42 36.75Q42.43 36.81 44.06 36.13L44.14 36.21L44.15 36.22Q45.04 35.61 45.04 34.35L45.00 34.32L45.02 34.34Q44.93 33.43 44.69 32.04L44.63 31.97L44.68 32.02Q44.26 29.22 44.60 26.54L44.64 26.58L44.63 26.57Q44.91 23.68 46.16 21.24L46.17 21.25L46.29 21.36Q45.72 21.64 44.53 22.01L44.56 22.05L44.51 21.99Q44.62 21.36 44.89 20.85L45.04 21.00L45.45 19.87L45.48 19.91Q43.78 20.52 40.96 20.96L40.84 20.84L40.91 20.91Q39.93 25.30 40.06 29.86L39.90 29.69L40.04 29.83Q40.12 31.71 37.74 32.15L37.62 32.03L37.40 32.23L37.19 32.15L36.31 31.98L36.40 32.07Q36.32 31.27 36.35 30.83L36.32 30.80L36.22 30.70Q36.48 26.75 35.87 22.80L35.82 22.75L35.00 22.75L34.90 22.65Q34.42 22.61 33.94 22.51L34.04 22.61L33.98 22.55Q33.67 21.32 33.44 20.64L33.45 20.66L33.34 20.55Q30.98 20.29 28.97 19.14L28.97 19.14L29.01 19.18Q30.73 22.11 31.37 25.14L31.46 25.23L31.38 25.15Q31.83 27.13 31.70 30.26L31.84 30.40L31.78 30.34Q31.88 30.54 31.81 31.53L31.80 31.52L31.77 31.49Q31.64 33.60 32.86 34.45L32.81 34.39L32.81 34.40Q33.13 36.38 39.38 36.72Z"/><path d="M6 23 C31 9,68 38,81 28" stroke="#68eded" fill="none"/><path fill="#494440" d="M75.93 34.43L75.85 34.34L74.47 34.49L74.30 34.32Q71.33 34.38 70.48 32.47L70.46 32.46L70.50 32.50Q71.53 31.55 72.82 30.57L72.81 30.55L72.79 30.54Q73.32 32.49 75.87 32.36L75.99 32.48L75.86 32.35Q76.66 32.40 77.58 32.19L77.62 32.24L77.63 32.25Q78.33 31.65 78.26 30.80L78.21 30.76L78.38 30.92Q78.15 29.77 76.55 29.16L76.58 29.19L73.14 27.79L73.20 27.85Q71.26 26.79 70.95 23.63L70.89 23.57L70.89 23.57Q70.73 21.67 72.66 21.16L72.62 21.12L72.68 21.18Q73.37 20.82 76.03 20.82L76.08 20.87L76.03 20.82Q80.43 20.87 81.24 23.12L81.22 23.09L81.31 23.18Q80.62 23.55 79.98 23.95L80.02 24.00L78.71 24.80L78.88 24.97Q78.40 23.23 75.51 23.02L75.54 23.06L75.41 22.93Q75.00 23.06 74.08 23.43L74.00 23.35L74.06 23.41Q73.58 23.75 73.58 24.74L73.52 24.67L73.55 24.70Q73.77 25.57 75.40 26.18L75.40 26.18L75.55 26.33Q76.34 26.51 78.72 27.49L78.81 27.58L78.80 27.57Q80.54 28.43 80.71 30.70L80.67 30.66L80.67 30.67Q80.60 31.10 80.53 31.98L80.68 32.13L80.68 32.13Q80.62 32.89 80.11 33.47L80.02 33.38L80.16 33.52Q78.55 34.32 75.83 34.32ZM80.24 36.79L80.09 36.64L80.17 36.72Q81.08 36.85 82.30 36.58L82.24 36.52L82.12 36.40Q83.07 35.78 82.90 34.70L82.94 34.74L82.92 34.72Q82.97 34.33 82.70 32.90L82.55 32.75L82.70 32.90Q82.11 30.17 80.52 29.09L80.57 29.14L80.51 29.08Q80.05 27.84 78.93 27.19L79.02 27.28L78.98 27.24Q77.78 26.79 75.57 25.94L75.56 25.93L75.70 26.07Q75.82 25.64 76.05 25.54L75.94 25.43L76.04 25.53Q76.66 25.20 77.24 25.16L77.12 25.04L77.15 25.07Q77.85 25.03 78.53 25.27L78.52 25.25L78.54 25.34L78.70 25.40L78.79 25.32L78.76 25.32L78.87 25.43Q79.76 25.78 79.93 26.90L80.00 26.97L79.92 26.89Q81.19 26.29 82.89 24.80L82.74 24.65L82.74 24.65Q82.50 24.00 81.62 22.94L81.68 23.01L81.67 23.00Q80.64 20.58 76.09 20.47L76.08 20.46L76.06 20.45Q73.26 20.43 71.49 20.94L71.60 21.05L71.55 21.00Q70.35 21.57 70.56 23.44L70.50 23.39L70.54 23.43Q70.53 24.43 71.34 26.30L71.35 26.31L71.37 26.33Q71.95 27.42 72.87 28.06L72.82 28.02L72.76 27.96Q73.41 29.32 74.57 29.93L74.62 29.98L74.49 29.86Q75.37 30.13 76.22 30.47L76.32 30.56L77.96 31.18L78.00 31.23Q77.72 32.24 75.99 32.14L75.90 32.04L75.91 32.05Q75.63 32.22 74.54 31.94L74.41 31.82L74.37 31.64L74.30 31.77L74.24 31.71Q73.61 31.52 73.03 30.20L72.89 30.06L73.02 30.19Q70.97 31.44 69.98 32.45L70.15 32.62L70.04 32.51Q70.35 33.36 71.27 34.08L71.15 33.96L71.05 34.13L71.03 34.12Q72.46 36.15 76.23 36.49L76.19 36.45L76.07 36.33Q77.20 36.44 80.09 36.64Z"/><path fill="#544c5b" d="M55.70 24.45L55.55 24.29L55.57 24.32Q55.33 24.28 55.06 24.28L55.16 24.38L55.02 24.25Q53.90 24.31 52.61 25.06L52.55 25.00L52.71 25.16Q51.35 25.97 51.35 27.67L51.38 27.71L51.42 27.75Q51.35 30.74 52.71 31.93L52.70 31.91L52.86 32.08Q53.69 33.11 55.73 33.11L55.73 33.11L55.73 33.11Q55.95 33.12 56.22 33.12L56.25 33.15L56.22 33.13Q57.62 32.99 58.64 31.53L58.65 31.54L58.77 31.67Q59.64 30.25 59.57 28.66L59.54 28.63L59.64 28.72Q59.64 28.25 59.64 27.87L59.57 27.81L59.68 27.91Q59.58 26.22 58.35 25.18L58.48 25.30L58.40 25.23Q57.21 24.22 55.61 24.36ZM59.58 33.39L59.55 33.36L59.60 33.41Q58.70 35.13 55.37 35.23L55.45 35.31L55.39 35.25Q52.34 35.33 50.91 33.90L50.93 33.92L50.91 33.89Q49.70 32.41 48.98 28.13L49.00 28.15L48.95 28.09Q48.61 26.47 48.61 25.35L48.63 25.37L48.65 25.39Q48.66 23.80 49.31 22.84L49.24 22.78L49.21 22.75Q50.53 21.62 53.18 21.62L53.23 21.67L53.18 21.62Q58.78 21.58 60.48 23.89L60.57 23.98L60.52 23.93Q60.72 23.25 61.10 21.82L61.04 21.77L61.01 21.74Q62.24 21.57 64.42 20.86L64.37 20.81L64.37 20.81Q62.13 25.78 61.93 31.42L61.89 31.39L61.90 31.39Q61.85 37.06 63.76 42.26L63.74 42.24L63.74 42.25Q62.13 41.61 60.53 41.37L60.58 41.43L60.62 41.47Q59.69 37.82 59.59 33.40ZM60.21 41.57L60.37 41.73L60.35 41.70Q60.93 41.78 62.19 42.05L62.20 42.06L62.28 42.14Q62.35 42.66 62.86 43.91L62.81 43.87L62.94 43.99Q65.19 44.58 67.23 45.73L67.28 45.78L67.29 45.79Q63.62 39.84 63.62 32.23L63.64 32.25L63.69 32.30Q63.57 26.50 65.78 21.33L65.89 21.45L65.97 21.53Q65.22 21.66 64.00 22.24L64.09 22.34L64.12 22.36Q64.23 21.49 64.81 20.10L64.95 20.24L64.79 20.07Q63.49 20.65 60.64 21.43L60.77 21.56L60.73 21.53Q60.54 21.95 60.27 23.00L60.37 23.10L60.36 23.09Q58.54 21.37 53.06 21.23L52.96 21.13L52.99 21.16Q50.21 21.17 48.99 22.49L49.04 22.55L48.86 22.36Q48.21 23.42 48.25 25.12L48.28 25.15L48.26 25.13Q48.43 27.88 49.31 31.25L49.38 31.31L49.28 31.21Q49.84 33.34 50.65 34.19L50.73 34.26L51.06 34.60L51.11 34.64Q52.11 37.07 56.97 37.27L56.95 37.25L57.03 37.33Q57.85 37.26 59.48 36.99L59.48 37.00L59.42 36.93Q59.85 39.71 60.39 41.75ZM57.23 26.35L57.34 26.46L57.29 26.41Q58.22 26.39 58.97 26.66L59.10 26.79L58.93 26.62Q59.11 27.11 59.21 27.65L59.18 27.62L59.35 27.79Q59.33 28.18 59.26 28.72L59.22 28.68L59.27 28.73Q59.36 30.52 58.45 31.68L58.44 31.67L58.33 31.56Q57.36 32.90 55.69 32.73L55.74 32.78L55.73 32.77Q54.57 32.76 53.72 32.39L53.61 32.28L53.58 32.25Q53.44 31.71 53.44 30.62L53.37 30.55L53.41 30.58Q53.34 30.24 53.34 29.97L53.35 29.98L53.34 29.97Q53.32 28.39 54.51 27.35L54.53 27.37L54.51 27.35Q55.78 26.40 57.35 26.47Z"/></svg>' } }
+[2020-07-06T10:14:45.164] [INFO] response - { method: 'POST',
+  url: '/checkLogin',
+  body: { account: '1001', password: '123456', code: 'wuqs' },
+  costTime: 277,
+  response:
+   { status: 302,
+     message: 'Found',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        location: '/index',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '43' },
+     body: 'Redirecting to <a href="/index">/index</a>.' } }
+[2020-07-06T10:14:45.174] [INFO] response - { method: 'GET',
+  url: '/index',
+  body: {},
+  costTime: 3,
+  response:
+   { status: 200,
+     message: 'OK',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '2701' },
+     body:
+      '<!DOCTYPE html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n<title>后台管理系统</title>\n<link type="text/css" rel="stylesheet" href="/stylesheets/style_index.css" />\n<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css" />\n<script type="text/javascript" src="/javascripts/jquery-1.8.3.min.js"></script>\n<script type="text/javascript" src="/javascripts/menu.js"></script>\n</head>\n\n<body>\n<div class="top"></div>\n<div id="header">\n\t<div class="logo">后台管理</div>\n\t<div class="navigation">\n\t\t<ul>\n\t\t \t<li>欢迎您！</li>\n\t\t\t<li>张三</li>\n\t\t\t<li><a href="/logout">退出</a></li>\n\t\t</ul>\n\t</div>\n</div>\n<div id="content">\n\t<div class="left_menu">\n\t\t<ul id="nav_dot">\n\n\t  <li>\n        <h4 class="M1"><span></span>用户管理</h4>\n        <div class="list-item none">\n            <a href=\'/users/userlist\' target="iframe1">用户列表</a>\n        </div>\n        <div class="list-item none">\n            <a href=\'/users/add\' target="iframe1">增加用户</a>\n        </div>        \n\t  </li>\n     \n     \n      <li>\n        <h4 class="M2"><span></span>角色权限管理</h4>\n        <div class="list-item none">\n            <a href=\'/roles/rolelist\' target="iframe1">角色列表</a>\n        </div>\n        <div class="list-item none">\n            <a href=\'/roles/add\' target="iframe1">增加角色</a>\n        </div>\n    </li>\n    \n\n    <li>\n        <h4 class="M3"><span></span>比赛队伍管理</h4>\n        <div class="list-item none">\n            <a href=\'/activitys/activitylist\' target="iframe1">比赛活动列表</a>\n        </div>       \n    </li>\n\n   \n\n    <li>\n        <h4 class="M5"><span></span>个人信息管理</h4>\n        <div class="list-item none">\n            <a href=\'/myself/myselflist\' target="iframe1">个人审核表</a>\n        </div>\n        <div class="list-item none">\n            <a href=\'/myself/schedel\' target="iframe1">日程表</a>\n        </div>\n        \n    </li>\n\n    <li>\n        <h4 class="M6"><span></span>比赛通告管理</h4>\n        <div class="list-item none">\n            <a href=\'/announces/announcelist\' target="iframe1">比赛通告列表</a>\n        </div>\n        <div class="list-item none">\n            <a href=\'/announces/add\' target="iframe1">增加比赛通告</a>\n        </div>\n    </li>\n\n    </ul>\n    </div>\t\n    <div class="m-right">\n        <div class="main">\n            <iframe frameborder="0" name="iframe1" src="welcome"  scrolling="auto"  width="100%" height="100%">\n                您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。\n            </iframe>\n        </div>\n</div>\n</div>\n<script>navList(12);</script>\n</body>\n\n' } }
+[2020-07-06T10:14:45.381] [INFO] response - { method: 'GET',
+  url: '/favicon.ico',
+  body: {},
+  costTime: 2,
+  response:
+   { status: 404,
+     message: 'Not Found',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '473' },
+     body:
+      '\n<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <meta http-equiv="X-UA-Compatible" content="ie=edge">\n    <link rel="stylesheet" href="/stylesheets/error.css">\n    <title>错误信息</title>\n</head>\n<body>\n    <div class="content">\n            <h1>抱歉，找不到你的诗和远方了！</h1>\n            \n            <h2>404</h2>\n            \n    </div>\n</body>\n</html>' } }
+[2020-07-06T10:14:45.417] [INFO] response - { method: 'GET',
+  url: '/welcome',
+  body: {},
+  costTime: 52,
+  response:
+   { status: 200,
+     message: 'OK',
+     header:
+      [Object: null prototype] {
+        vary: 'Origin',
+        'access-control-allow-origin': 'http://localhost:8080',
+        'access-control-allow-credentials': 'true',
+        'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+        'content-type': 'text/html; charset=utf-8',
+        'content-length': '478' },
+     body:
+      '<!DOCTYPE html>\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n<title>后台管理系统</title>\r\n<link type="text/css" rel="stylesheet" href="/stylesheets/style_index.css" />\r\n<script type="text/javascript" src="/javascripts/jquery-1.8.3.min.js"></script>\r\n<script type="text/javascript" src="/javascripts/menu.js"></script>\r\n</head>\r\n\r\n<body>\r\n\r\n    <div class="jumbotron">\r\n        <h1>Hello, world!</h1>\r\n      </div>\r\n\r\n\r\n</body>\r\n</html>\r\n' } }
